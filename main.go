@@ -13,7 +13,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/maruel/serve-dir/loghttp"
+	"github.com/maruel/serve-dir-testing/loghttp"
 )
 
 func getWd() string {

@@ -1,3 +1,3 @@
-module github.com/maruel/serve-dir
+module github.com/maruel/serve-dir-testing
 
 go 1.13

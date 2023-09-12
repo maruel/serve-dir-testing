@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/maruel/serve-dir/loghttp"
+	"github.com/maruel/serve-dir-testing/loghttp"
 )
 
 func ExampleHandler() {
