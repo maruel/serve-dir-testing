@@ -7,3 +7,4 @@ env:
   - CGO_ENABLED=0
 flags:
   - -trimpath
+binary: serve-dir-{{.Os}}-{{.Arch}}
