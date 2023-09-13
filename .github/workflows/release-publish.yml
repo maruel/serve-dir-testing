@@ -18,7 +18,7 @@ on:
   #  types: [created]
   push:
     tags:
-      - v.+
+      - "*"
 
 permissions: read-all
 
