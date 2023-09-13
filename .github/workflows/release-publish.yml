@@ -12,8 +12,10 @@ on:
   # means that users will be confused by having a release but no binary will be
   # available until the builds are done; this is a race condition.
   #
-  # We can alleviate this by pushing the tag first, waiting for the builds to
-  # complete, then create the release.
+  # We can alleviate this by pushing the tag first, causing the builds start
+  # right away. One winkle is that github will create a release as soon as one
+  # binary is uploaded.
+  #
   #release:
   #  types: [created]
   push:
