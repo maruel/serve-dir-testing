@@ -1,0 +1,10 @@
+# Ref: https://github.com/slsa-framework/slsa-github-generator/tree/main/internal/builders/go#configuration-file
+
+version: 1
+goos: linux
+goarch: arm64
+env:
+  - CGO_ENABLED=0
+flags:
+  - -trimpath
+binary: serve-dir-linux-arm64
