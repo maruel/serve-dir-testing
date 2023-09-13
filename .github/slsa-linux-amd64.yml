@@ -11,4 +11,4 @@ env:
   - CGO_ENABLED=0
 flags:
   - -trimpath
-binary: serve-dir-linux-amd64
+binary: linux-amd64/serve-dir

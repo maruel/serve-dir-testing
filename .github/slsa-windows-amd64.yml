@@ -11,4 +11,4 @@ env:
   - CGO_ENABLED=0
 flags:
   - -trimpath
-binary: serve-dir-windows-amd64
+binary: windows-amd64/serve-dir.exe
