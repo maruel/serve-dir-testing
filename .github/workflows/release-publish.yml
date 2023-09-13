@@ -7,14 +7,25 @@
 name: SLSA Go releaser
 on:
   workflow_dispatch:
-  release:
-    types: [created]
+  # We want to create the binaries as soon as the tag is pushed, not after the
+  # release is created. When the release is created, it's immediately live. This
+  # means that users will be confused by having a release but no binary will be
+  # available until the builds are done; this is a race condition.
+  #
+  # We can alleviate this by pushing the tag first, waiting for the builds to
+  # complete, then create the release.
+  #release:
+  #  types: [created]
+  push:
+    tags:
+      - v.+
 
 permissions: read-all
 
 jobs:
   args:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v3
         with:
@@ -26,6 +37,7 @@ jobs:
       contents: write # To upload release assets.
       actions: read   # To read workflow path.
     strategy:
+      fail-fast: false
       matrix:
         os:
           - darwin
